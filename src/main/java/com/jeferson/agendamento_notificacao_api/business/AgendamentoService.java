@@ -3,6 +3,7 @@ package com.jeferson.agendamento_notificacao_api.business;
 import com.jeferson.agendamento_notificacao_api.business.mapper.IAgendamentoMapper;
 import com.jeferson.agendamento_notificacao_api.controller.dto.in.AgendamentoRequestDTO;
 import com.jeferson.agendamento_notificacao_api.controller.dto.out.AgendamentoResponseDTO;
+import com.jeferson.agendamento_notificacao_api.infrastructure.exception.NotFoundException;
 import com.jeferson.agendamento_notificacao_api.infrastructure.repositories.AgendamentoRepository;
 import org.springframework.stereotype.Service;
 
@@ -23,6 +24,10 @@ public class AgendamentoService {
                         agendamentoMapper.paraEntity(agendamento)));
     }
 
+    public AgendamentoResponseDTO buscarAgendamentosPorId(Long id){
+        return agendamentoMapper.paraDTO(repository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Id não encontrado")));
+    }
 
 
 }
