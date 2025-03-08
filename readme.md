@@ -1,7 +1,8 @@
 
 # Agendador de Notificações
 
-Esse projeto foi desenvolvido para um desafio técnico visando apresentar habilidades de desenvolvedor java backend e tem como escopo o cadastro de notificações para posterior envio.
+Esse projeto foi desenvolvido para um desafio técnico visando apresentar habilidades de desenvolvedor java backend e tem como escopo o cadastro de notificações para posterior envio.  
+Obs: O projeto foi resolvido por Angélica Weiler do canal [Javanauta](https://www.youtube.com/@javanauta), e apenas replicado por mim como forma de estudo.
 
 
 ## Rodando localmente
